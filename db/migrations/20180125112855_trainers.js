@@ -3,9 +3,9 @@ exports.up = function ( knex, Promise ) {
         table.increments();
         table.string( 'name' );
         table.timestamps( true, true );
-    } )
+    } );
 };
 
 exports.down = function ( knex, Promise ) {
-    return knex.schema.dropTable( 'trainers' )
+    return knex.schema.dropTable( 'trainers' );
 };

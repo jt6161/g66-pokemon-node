@@ -1,10 +1,11 @@
-var knex = require('knex');
+const knex = require( "../db/knex.js" );
 
 module.exports = {
 
-  main: function(req, res, next) {
-    res.render('index', { title: 'Express' });
-  },
+
+    main: function ( req, res ) {
+        res.redirect( '/pokemon' );
+    },
 
 
 };
