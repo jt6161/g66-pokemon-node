@@ -21,7 +21,8 @@ module.exports = {
         knex( 'pokemon' )
             .where( 'id', req.params.id )
             .then( ( result ) => {
-                req.session
+              req.session.id.push(result[0]);
+                res.render( 'pokemon' )
             } )
     }
 
