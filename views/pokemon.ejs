@@ -49,12 +49,21 @@
         <div class="app-content">
           <b>Pokemón</b>
           <hr>
-          <table>
-            <b>id   name  trainer id  cp  in_gym</b>
-          </table>
-<hr>
-          <a class="pokemon-more-button" href="/form">
-          <button type="button">+ New Pokemon</button></a>
+
+
+          <!-- <button type="button">+ New Pokemón</button> -->
+
+          <form action="/pokemon" method="post">
+            <input type="number" name="id" placeholder="id">
+            <input type="text" name="name" placeholder="name">
+            <input type="number" name="trainer_id" placeholder="trainer_id">
+            <input type="number" name="cp" placeholder="cp">
+            <input type="boolean" name="in_gym" placeholder="in_gym">
+            <input type="submit">
+          </form>
+          <hr>
+          <b>ALL Pokemon</b>
+
 
         </div>
 

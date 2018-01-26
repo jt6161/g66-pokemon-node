@@ -17,21 +17,5 @@ module.exports = {
                 res.render( 'pokemon' )
             } )
     },
-    add: function ( req, res ) {
-        knex( 'pokemon' )
-            .where( 'id', req.params.id )
-            .then( ( result ) => {
-              req.session.id.push(result[0]);
-                res.render( 'pokemon' )
-            } )
-    }
 
-
-
-
-
-
-
-
-
-};
+}
