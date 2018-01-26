@@ -8,13 +8,21 @@ module.exports = function(app) {
 
   app.get('/', index.main);
 
-  //pokemon
+  //Pokemon
   app.get('/pokemon', pokemon.index);
 
   app.post('/pokemon', pokemon.create);
 
-
-
   //Trainers
+  // app.get('/trainers', trainers.index);
+  //
+  // app.post('/trainers', trainers.create);
 
-}
+  //In_gym
+  // app.get('#', gym.index);
+  //
+  // app.post('#', gym.create);
+
+
+
+};

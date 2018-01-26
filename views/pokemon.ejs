@@ -47,12 +47,10 @@
     <div class="pokemon-content mdl-layout__content">
       <div class="app-content pokemon-wear-section">
         <div class="app-content">
-          <b>Pokemón</b>
+          <h3>Welcome Players and Fans</h3>
+          <b>Add a Pokemón</b>
           <hr>
-
-
           <!-- <button type="button">+ New Pokemón</button> -->
-
           <form action="/pokemon" method="post">
             <input type="number" name="id" placeholder="id">
             <input type="text" name="name" placeholder="name">
@@ -62,12 +60,18 @@
             <input type="submit">
           </form>
           <hr>
-          <b>ALL Pokemon</b>
+          <b>Pokemón:</b>
+<div>
+  <% for (let i = 0; i < pokemon.length; i++) { %>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<% } %>
 
+</div>
 
         </div>
-
-
       </div>
 
       <footer class="pokemon-footer mdl-mega-footer">
