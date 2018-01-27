@@ -8,18 +8,15 @@ module.exports = {
         trainers: results
       });
     })
-
-
-
   },
+
   create: (req, res) => {
     knex('trainers')
       .insert({
         id: req.session.user,
         name: req.body.name,
       }, '*')
-      .then((trainerNew) => {
-        req.session.trainerNew = trainerNew[0].id
+      .then(() => {
         req.session.save(() => {
           res.render('trainers')
         })
