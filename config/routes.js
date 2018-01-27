@@ -3,7 +3,7 @@ const index = require("../controllers/index.js");
 const pokemon = require("../controllers/pokemon.js");
 const trainers = require("../controllers/trainers.js");
 const form = require("../controllers/form.js");
-
+// const jacob = require("../controllers/jacob.js");
 
 module.exports = function(app) {
 
@@ -28,6 +28,9 @@ module.exports = function(app) {
   app.post('/form', form.create);
 
 
+  // app.get('/jacob', jacob.index);
+  //
+  // app.post('/jacob', jacob.create);
 
 
   //In_gym

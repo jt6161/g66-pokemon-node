@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Pokemón</title>
+  <title>Pokemón Trainers</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.min.css">
@@ -46,31 +46,17 @@
     <div class="pokemon-content mdl-layout__content">
       <div class="app-content pokemon-wear-section">
         <div class="app-content">
-          <h3>Pokemón</h3>
-          <a href="/form">
-<button type="button">Add New Pokemón</button></a>
-          <% for(let i = 0; i < pokemon.length; i++) { %>
-
+          <h3>Pokemón Trainer - Jacob</h3>
+          <% for(var i = 0; i < trainers.length; i++) { %>
             <hr>
             <div>
               <b>
-              ID:
-                <%= pokemon[i].id %>
-              -
-              NAME:
-                <%= pokemon[i].name %>
-              -
-              TRAINER ID:
-                <%= pokemon[i].trainer_id %>
-              -
-              CP:
-                <%= pokemon[i].cp %>
-              -
-              IN GYM:
-                <%= pokemon[i].in_gym %>
-              </b>
-              <a href="/pokemon/remove/<%=pokemon[i].name%>">Delete</a>
-              <a href="/pokemon/<%=pokemon[i].name%>">Edit</a>
+                TRAINER ID: 1
+                  -
+                  TRAINER NAME: Jacob
+                  
+                  </b>
+
             </div>
             <% } %>
         </div>
