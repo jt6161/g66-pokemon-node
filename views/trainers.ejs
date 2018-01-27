@@ -48,7 +48,18 @@
       <div class="app-content pokemon-wear-section">
         <div class="app-content">
           <h3>Pokemón Trainers</h3>
-          <hr>
+          <% for(let i = 0; i < trainers.length; i++) { %>
+            <hr>
+            <div>
+              <b>
+                Trainer Id:
+                <%= trainers[i].id %>
+                  -
+                  Trainer Name:
+                  <%= trainers[i].name %>
+                  </b>
+            </div>
+            <% } %>
 
         </div>
       </div>

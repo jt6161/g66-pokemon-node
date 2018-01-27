@@ -39,39 +39,23 @@
         <span class="pokemon-mobile-title mdl-layout-title">
             <img class="pokemon-logo-image" src="images/pokemon-logo.png">
           </span>
-
       </div>
     </div>
 
     <div class="pokemon-content mdl-layout__content">
       <div class="app-content pokemon-wear-section">
         <div class="app-content">
-          <h3>Welcome Players and Fans</h3>
-          <a href="/form">
-<button type="button">Add A New Pokemón</button></a>
-
+          <h3>Add a new Pokemón</h3>
+          <!-- ADD A NEW POKEMON FORM -->
           <hr>
-          <b>Pokemón</b>
-          <% for(let i = 0; i < pokemon.length; i++) { %>
-            <hr>
-            <div>
-              <p>Id:
-                <%= pokemon[i].id %>
-              </p>
-              <p>Name:
-                <%= pokemon[i].name %>
-              </p>
-              <p>Trainer Id:
-                <%= pokemon[i].trainer_id %>
-              </p>
-              <p>cp:
-                <%= pokemon[i].cp %>
-              </p>
-              <p>In Gym:
-                <%= pokemon[i].in_gym %>
-              </p>
-            </div>
-            <% } %>
+          <form action="/pokemon" method="post">
+            <input type="number" name="id" placeholder="id">
+            <input type="text" name="name" placeholder="name">
+            <input type="number" name="trainer_id" placeholder="trainer_id">
+            <input type="number" name="cp" placeholder="cp">
+            <input type="boolean" name="in_gym" placeholder="in_gym">
+            <input type="submit">
+          </form>
         </div>
       </div>
     </div>

@@ -1,17 +1,9 @@
-const knex = require('../db/knex.js');
+const knex = require("../db/knex.js");
 
 module.exports = {
 
-  index: (req, res) => {
-    knex('pokemon')
-      .then((results) => {
-        res.render('pokemon', {
-          pokemon: results,
-        });
-      })
-
-
-
+  index: function(req, res) {
+    res.render('form');
   },
   create: (req, res) => {
     knex('pokemon')
@@ -26,4 +18,5 @@ module.exports = {
         res.redirect('/pokemon')
       })
   }
-}
+
+};

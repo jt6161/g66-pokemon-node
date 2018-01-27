@@ -3,7 +3,13 @@ const knex = require('../db/knex.js');
 module.exports = {
 
   index: (req, res) => {
-    res.render('trainers');
+    knex('trainers').then((results) => {
+      res.render('trainers', {
+        trainers: results
+      });
+    })
+
+
 
   },
   create: (req, res) => {
@@ -15,7 +21,7 @@ module.exports = {
       .then((trainerNew) => {
         req.session.trainerNew = trainerNew[0].id
         req.session.save(() => {
-          res.redirect('/trainers')
+          res.render('trainers')
         })
 
       })
