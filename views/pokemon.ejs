@@ -49,8 +49,8 @@
           <h3>Pokemón</h3>
           <a href="/form">
 <button type="button">Add New Pokemón</button></a>
-
           <% for(let i = 0; i < pokemon.length; i++) { %>
+
             <hr>
             <div>
               <b>
@@ -69,6 +69,8 @@
               IN GYM:
                 <%= pokemon[i].in_gym %>
               </b>
+                <a href="/pokemon/remove/<%=pokemon[i].name%>">Delete</a>
+                <a href="/pokemon/<%=pokemon[i].name%>">Edit</a>
             </div>
             <% } %>
         </div>
