@@ -46,30 +46,29 @@
     <div class="pokemon-content mdl-layout__content">
       <div class="app-content pokemon-wear-section">
         <div class="app-content">
-          <h3>Welcome Players and Fans</h3>
+          <h3>Pokemón</h3>
           <a href="/form">
-<button type="button">Add A New Pokemón</button></a>
+<button type="button">Add New Pokemón</button></a>
 
-          <hr>
-          <b>Pokemón</b>
           <% for(let i = 0; i < pokemon.length; i++) { %>
             <hr>
             <div>
-              <p>Id:
+              <b>
+              ID:
                 <%= pokemon[i].id %>
-              </p>
-              <p>Name:
+              -
+              NAME:
                 <%= pokemon[i].name %>
-              </p>
-              <p>Trainer Id:
+              -
+              TRAINER ID:
                 <%= pokemon[i].trainer_id %>
-              </p>
-              <p>cp:
+              -
+              CP:
                 <%= pokemon[i].cp %>
-              </p>
-              <p>In Gym:
+              -
+              IN GYM:
                 <%= pokemon[i].in_gym %>
-              </p>
+              </b>
             </div>
             <% } %>
         </div>
